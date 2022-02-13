@@ -1,6 +1,7 @@
 desktop.ini
 .DS_Store
 nbproject/
+.idea
 
 .env*
 !.env.example
