@@ -22,15 +22,19 @@ body {
  * Globals
  */
 
-h1 {
+h2 {
     color: $color-grey;
     font-size: 11px;
     letter-spacing: 4.4px;
     text-transform: uppercase;
 }
 
-h2 {
+h1 {
     font-size: 3rem;
+}
+
+h1 + h2 {
+    margin-top: 1rem;
 }
 
 
@@ -85,7 +89,7 @@ img.separator {
     left: 0;
     top: 0;
     z-index:2;
-    pointer-events: visible;
+    pointer-events: none;
     background: url("../images/main4-obrys.png");
     background-size: cover;
     background-position: bottom;
