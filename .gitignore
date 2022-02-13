@@ -1,0 +1,15 @@
+desktop.ini
+.DS_Store
+nbproject/
+
+.env*
+!.env.example
+!.env.test.example
+
+###< symfony/framework-bundle ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+node_modules/
