@@ -1,8 +1,6 @@
 # README #
 
-# Gulp SASS Starter Boilerplate
-
->Gulp SASS Starter Project with Bootstrap Example
+# Můj svatební web - vychází z "Gulp SASS Starter Boilerplate"
 
 ### Prerequisites
 * node
@@ -12,9 +10,6 @@
 ## Quick Start:
 
 ```shell
-
-# Browse to project folder
-cd /path/to/project/this/folder
 
 # Install all dependencies
 npm install
