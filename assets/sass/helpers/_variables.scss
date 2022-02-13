@@ -1,0 +1,42 @@
+//===========================================
+// -Variables start
+//===========================================
+
+// Colors start
+
+// define your vars or override bootstrap vars
+$default: red;
+$primary: green;
+$secondary: blue;
+$alternate: cyan;
+
+$link-color: #687259;
+
+
+$color-black: #1e1d1d;
+$color-grey:  lighten($color-black,50%);
+
+$primary-color: #b4b298;
+
+// Typography Family
+$font-default: 'Montserrat', sans-serif;
+$font-primary: "Montserrat", sans-serif;
+$font-title: "Waterfall", sans-serif;
+$font-fancy: 'Source Serif Pro', cursive;
+$font-handwritten: 'Carattere', cursive;
+$font-handwritten: 'Notera', cursive;
+
+$font-path: "../fonts";
+
+// define your Break Points or override bootstrap Break Points
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// ===========================================
+// -Variables end
+// ===========================================

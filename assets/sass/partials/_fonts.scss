@@ -1,0 +1,31 @@
+//===========================================
+// -Fonts start
+//===========================================
+
+@include font-face("family", $font-path, "Roboto-Regular", 400, "normal");
+@include font-face("family", $font-path, "Inter-Regular", 400, "normal");
+
+@include font-face("Notera", $font-path, "NoteraRegular", 400, "normal");
+@include font-face("Notera", $font-path, "NoteraThin", 100, "normal");
+@include font-face("Notera", $font-path, "NoteraRegular", 200, "normal");
+
+@import url('https://fonts.googleapis.com/css2?family=Waterfall&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Waterfall&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Parisienne&family=Waterfall&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Montserrat:wght@300&family=Parisienne&family=Roboto+Condensed:ital,wght@0,400;1,300&family=Waterfall&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Montserrat:wght@300&family=Parisienne&family=Roboto+Condensed:ital,wght@0,400;1,300&family=Source+Serif+Pro:wght@200&family=Waterfall&display=swap');
+
+.font-main {
+    font-family: $font-default;
+}
+
+.font-fancy {
+    font-family: $font-fancy;
+}
+
+.font-handwritten {
+    font-family: $font-handwritten;
+}
+//===========================================
+// -Fonts  end
+//===========================================

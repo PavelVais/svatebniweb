@@ -1,0 +1,355 @@
+//===========================================
+// -Home Page start
+//===========================================
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+    height: 100%;
+    background-color: #FFF;
+}
+
+body {
+    //text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    //box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+/*
+ * Globals
+ */
+
+h1 {
+    color: $color-grey;
+    font-size: 11px;
+    letter-spacing: 4.4px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+
+/* Links */
+a,
+a:focus,
+a:hover {
+    // color: #fff;
+}
+
+p {
+    color: lighten($color-black,10%);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.text-highlight {
+    color: $color-black;
+    font-size: 1.4rem;
+}
+
+
+.sticky {
+    position: sticky;
+    top: 3rem;
+}
+
+img.separator {
+    margin: 2rem auto;
+}
+
+
+.cover-container {
+    background: url("../images/main4_2.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-blend-mode: multiply;
+    position: relative;
+
+    margin: 2rem;
+    height: calc(70vw * 1.425);
+
+    @include mq("md", max) {
+        margin: 0 0 2rem;
+    }
+}
+#obrys {
+    width:100%;
+    height:100%;
+    position:absolute;
+    opacity:0;
+    left: 0;
+    top: 0;
+    z-index:2;
+    pointer-events: visible;
+    background: url("../images/main4-obrys.png");
+    background-size: cover;
+    background-position: bottom;
+
+    animation: flickerI 5s linear infinite;
+
+}
+
+
+main {
+    padding-top: 25vh;
+}
+
+section.col {
+    margin-bottom: 6rem;
+    max-width: 40%;
+
+    @include mq("md", max) {
+        max-width: 80%;
+    }
+}
+
+
+.widget {
+    border-radius: 3rem;
+    padding: 1.25rem;
+    backdrop-filter: blur(1px);
+    background-color: rgba(247, 247, 247, 0.42);
+
+}
+
+
+.color-splash {
+    border-radius: 50%;
+    min-width: 10vw;
+    max-width: 10vw;
+    min-height: 10vw;
+    max-height: 10vw;
+    margin: 1rem;
+    display: block;
+
+    @include mq("sm", max) {
+        min-width: 50px;
+        max-width: 50px;
+        min-height: 50px;
+        max-height: 50px;
+    }
+
+    &:nth-of-type(1) {
+        background-color: #8E412E;
+    }
+    &:nth-of-type(2) {
+        background-color: #BA6F4D;
+    }
+    &:nth-of-type(3) {
+        background-color: #E6CEBC;
+    }
+    &:nth-of-type(4) {
+        background-color: #A2A182;
+    }
+    &:nth-of-type(5) {
+        background-color: #687259;
+    }
+    &:nth-of-type(6) {
+        background-color: #ebe3da;
+    }
+}
+
+.logo {
+    position: relative;
+    display: block;
+    width: 380px;
+    height: 100px;
+
+
+    & > * {
+        font-size: 4rem;
+        color: #100f0f;
+        font-family: $font-fancy;
+
+    }
+
+    .jana {
+        position: absolute;
+        left: 0;
+        margin-top: -1rem;
+
+    }
+
+    .and {
+        margin-top: 1rem;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        opacity: .6;
+
+    }
+
+    .pavel {
+        margin-top: 2rem;
+        right: 0;
+        position: absolute;
+    }
+
+    // Media Query max width Usage
+    @include mq("md", max) {
+        max-width: 150px;
+        height: 70px;
+
+        & > * {
+            font-size: 2rem;
+        }
+    }
+}
+
+#logo-big {
+    @include transition(750ms);
+    transform: scale(1);
+    opacity: 1;
+    margin-top: 3rem;
+    margin-bottom: 29vh;
+
+    @include mq("md", max) {
+        opacity: 0;
+        margin-bottom: -3rem;
+    }
+
+}
+
+
+#logo-small {
+    @include transition(1s);
+    transform: scale(.4) translateY(50px);
+    opacity: 0;
+
+    @include mq("md", max) {
+        opacity: 1;
+        transform: scale(.7) translateY(0px);
+
+    }
+
+    .and {
+        opacity: .3;
+    }
+}
+
+// LOGO sticky
+.logo-hero {
+    font-size: 7rem;
+    line-height: 5rem;
+    text-align: center;
+    color: #676458;
+    animation: fadeIn 2.5s ease-in-out forwards;
+    overflow: hidden;
+
+    // Media Query max width Usage
+    @include mq("md", max) {
+        font-size: 2.4rem;
+        line-height: 2.4rem;
+    }
+}
+
+
+
+
+#header-panel {
+    @include transition();
+    width: 100%;
+    margin-left: -15px;
+    z-index: 1;
+    opacity: 0;
+    background-color: white;
+    position: fixed;
+    box-shadow: 0px 5px 9px 1px #adacaca3;
+    transform: scale(1) translateY(-50px);
+
+    @include mq("md", max) {
+        opacity: 1;
+        transform: scale(1) translateY(0px);
+    }
+
+}
+
+
+
+.container-fluid {
+    &.fixed {
+
+        #header-panel {
+            opacity: 1;
+            transform: scale(1) translateY(0px);
+        }
+
+        #logo-big {
+            transform: scale(.4) translateY(-100px);
+            opacity: 0;
+        }
+
+        #logo-small {
+            transform: scale(.7) translateY(0px);
+            opacity: 1;
+        }
+    }
+}
+
+
+.my-form {
+    $color: rgba(231, 231, 238, 0.21);
+    $border-color: darken($color, 10%);
+
+    $color-active: rgba(164, 85, 12, 0.38);
+
+    input, textarea, button {
+        border-radius: 10px;
+        background-color: $color;
+        border: 1px solid $border-color;
+        color: $color-grey;
+        font-size: 1rem;
+        padding: 1rem 1.4rem;
+        @include transition();
+
+        &::placeholder {
+            color: #676458;
+            opacity: .5;
+            font-size: 1rem;
+        }
+
+        &:focus {
+            border-color: $color-active;
+            box-shadow: 0px 0px 4px 0px $color-active;
+        }
+    }
+
+    button {
+        padding: 1rem 2rem;
+        border-radius: 20px;
+    }
+}
+
+
+
+/* The typing effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+
+@keyframes flickerI {
+    10% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+    }
+}

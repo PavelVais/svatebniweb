@@ -1,0 +1,70 @@
+//=======================================================
+// -Global style start
+//=======================================================
+
+// Default style start
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  font-family: $font-default;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  
+  // Media Query max width Usage
+  @include mq("md", max) {
+    font-size: 14px;
+  }
+  // Media Query min max width Usage
+  @include mq-only("md", "xl") {
+    font-size: 15px;
+  }
+  // Media Query min width Usage
+  @include mq("xl", min) {
+    font-size: 16px;
+  }
+}
+
+// Make images easier to work with
+img {
+  max-width: 100%;
+  display: block;
+}
+
+// Remove list styles on ul, ol elements with a class attribute
+ul[class],
+ol[class] {
+  padding-left: 0;
+  list-style: none;
+}
+
+%headings {
+  font-weight: 700;
+  //text-transform: uppercase;
+  line-height: 1;
+  margin-top: 0;
+}
+
+@for $i from 1 through 6 {
+  h#{$i},
+  .h#{$i} {
+    @extend %headings;
+  }
+}
+
+//=======================================================
+// -Global style  end
+//=======================================================
