@@ -15,8 +15,13 @@ $primary-color-hover: scale-color($primary-color, $lightness: 32%);
     h1, h2, h3, h4, h5, h6 {
         line-height: inherit;
         text-align: left;
-        font-family: $font-fancy;
         margin-top: 4px;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        letter-spacing: 0.2rem;
     }
 }
 

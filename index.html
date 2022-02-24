@@ -195,9 +195,11 @@
     <div class="row  justify-content-center">
         <section class="col text-center">
             <h1 class="font-handwritten">
-                I my máme speciální přání
+                Speciální přání
             </h1>
-            <h2>Speciální přání</h2>
+            <h2>
+                My si ale navymýšlíme
+            </h2>
             <img width="139" height="16" src="assets/images/separator.png" class="separator" alt="m" loading="lazy">
 
             <p style="">
@@ -212,9 +214,13 @@
                 <div class="col color-splash"></div>
                 <div class="col color-splash"></div>
             </div>
+
+            <p>Dále bychom vás chtěli požádat, abyste při obřadu nefotili.
+                Pevně věříme, že <a href="https://www.instagram.com/sejmsfoto//">@sejmsfoto</a> odvede svojí
+                práci dobře a fotky z toho budou senzační :)
+            </p>
         </section>
     </div>
-
 
 
     <div class="row justify-content-center">
@@ -224,20 +230,25 @@
             </h1>
             <h2>Přijeďte, bude prdel</h2>
             <img width="139" height="16" src="assets/images/separator.png" class="separator" alt="m" loading="lazy">
-
-            <form class="my-form" action="https://submit-form.com/OSBW7O6y">
-                <input class="form-control form-control-lg mb-2" type="text" placeholder="Jméno" name="name" required>
-                <input class="form-control form-control-lg mb-2" type="text" placeholder="Počet osob / dětí"
+            <form id="rsvp-form" class="my-form" action="https://submit-form.com/OSBW7O6y">
+                <input class="form-control form-control-lg mb-2" type="text" autocomplete="off" placeholder="Jméno"
+                       name="name" required>
+                <input class="form-control form-control-lg mb-2" type="text" autocomplete="off"
+                       placeholder="Počet dospelých a dětí"
                        name="number_of_quests" required>
                 <textarea
                         class="form-control form-control-lg mb-2"
                         name="message"
-                        placeholder="Poznámka"
+                        placeholder="Poznámka - nemohu dorazit? Potřebuji pořešit spaní? Pište :)"
                         required=""
                 ></textarea>
                 <br>
                 <button type="submit">Poslat</button>
             </form>
+            <div id="rsvp-form-message" style="display: none">
+                Mockrát děkujeme za zprávu.
+                <img width="139" height="16" src="assets/images/separator.png" class="separator" alt="m" loading="lazy">
+            </div>
 
         </section>
     </div>
